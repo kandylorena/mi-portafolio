@@ -54,10 +54,11 @@ document.addEventListener('DOMContentLoaded', () => {
     sendBtn.disabled = true;
 
     const data = {
-      name: document.getElementById('name').value,
-      email: document.getElementById('email').value,
+      from_name: document.getElementById('name').value,
+      from_email: document.getElementById('email').value,
       subject: document.getElementById('subject').value,
       message: document.getElementById('message').value,
+      to_name: 'Kandy',
     };
 
     try {
@@ -71,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
       formMessage.classList.remove('hidden');
       form.reset();
     } catch (err) {
+      console.error('EmailJS error:', err);
       formMessage.className = 'text-sm text-center font-medium text-red-500';
       formMessage.textContent = 'Error al enviar. Intenta de nuevo o escríbeme directamente al email.';
       formMessage.classList.remove('hidden');
