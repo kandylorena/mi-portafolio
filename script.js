@@ -54,11 +54,10 @@ document.addEventListener('DOMContentLoaded', () => {
     sendBtn.disabled = true;
 
     const data = {
-      from_name: document.getElementById('name').value,
-      from_email: document.getElementById('email').value,
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value,
       subject: document.getElementById('subject').value,
       message: document.getElementById('message').value,
-      to_name: 'Kandy',
     };
 
     try {
