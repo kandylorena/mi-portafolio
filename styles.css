@@ -2,31 +2,98 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ==============================
+   SECTION DIVIDERS
+   ============================== */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #e5e7eb, transparent);
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+/* ==============================
+   PROJECT CARDS
+   ============================== */
 .card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(43, 149, 200, 0.1);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.06);
 }
 
+.card-accent-bar {
+  height: 4px;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+/* Card accent variants */
+.card-accent-blue:hover {
+  box-shadow: 0 16px 35px rgba(43, 149, 200, 0.1);
+}
+.card-accent-purple:hover {
+  box-shadow: 0 16px 35px rgba(197, 158, 225, 0.15);
+}
+.card-accent-pink:hover {
+  box-shadow: 0 16px 35px rgba(226, 168, 195, 0.15);
+}
+.card-accent-peach:hover {
+  box-shadow: 0 16px 35px rgba(229, 202, 176, 0.18);
+}
+
+/* ==============================
+   BADGES
+   ============================== */
 .badge {
   display: inline-block;
   padding: 0.2rem 0.7rem;
   font-size: 0.7rem;
   font-weight: 600;
   border-radius: 9999px;
-  background-color: rgba(43, 149, 200, 0.08);
-  color: #2b95c8;
   letter-spacing: 0.025em;
-  transition: background-color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
-.badge:hover {
+.badge-blue {
+  background-color: rgba(43, 149, 200, 0.08);
+  color: #2b95c8;
+}
+.badge-blue:hover {
   background-color: rgba(43, 149, 200, 0.18);
 }
 
+.badge-purple {
+  background-color: rgba(197, 158, 225, 0.15);
+  color: #a86dcf;
+}
+.badge-purple:hover {
+  background-color: rgba(197, 158, 225, 0.28);
+}
+
+.badge-pink {
+  background-color: rgba(226, 168, 195, 0.15);
+  color: #d483a8;
+}
+.badge-pink:hover {
+  background-color: rgba(226, 168, 195, 0.28);
+}
+
+.badge-peach {
+  background-color: rgba(229, 202, 176, 0.2);
+  color: #c9956e;
+}
+.badge-peach:hover {
+  background-color: rgba(229, 202, 176, 0.35);
+}
+
+/* ==============================
+   SKILL BADGES
+   ============================== */
 .skill-badge {
   display: inline-block;
   padding: 0.55rem 1.3rem;
@@ -47,6 +114,9 @@ html {
   box-shadow: 0 4px 12px rgba(43, 149, 200, 0.2);
 }
 
+/* ==============================
+   SOCIAL ICONS
+   ============================== */
 .social-icon {
   display: inline-flex;
   align-items: center;
@@ -68,6 +138,74 @@ html {
   box-shadow: 0 6px 20px rgba(43, 149, 200, 0.25);
 }
 
+/* ==============================
+   CV DROPDOWN
+   ============================== */
+.cv-menu {
+  z-index: 40;
+}
+
+.cv-menu.show {
+  display: block;
+  animation: cvFadeIn 0.2s ease;
+}
+
+@keyframes cvFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) translateX(-50%);
+  }
+}
+
+/* ==============================
+   CONTACT MODAL
+   ============================== */
+.modal-overlay {
+  animation: modalFadeIn 0.25s ease;
+}
+
+.modal-overlay.hidden {
+  display: none;
+}
+
+.modal-content {
+  animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ==============================
+   FORM INPUTS
+   ============================== */
+input, textarea {
+  background-color: #fafafa;
+}
+
+input:focus, textarea:focus {
+  background-color: white;
+}
+
+/* ==============================
+   SELECTION
+   ============================== */
 ::selection {
   background-color: #2b95c8;
   color: white;
