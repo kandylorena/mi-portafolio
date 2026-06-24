@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kandy Lorena Palomino Bolivar | CV</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      background: #f8f9fa;
+    }
+    .cv-container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: white;
+      border-radius: 1.5rem;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+    .cv-header {
+      background: linear-gradient(135deg, #2b95c8, #c59ee1);
+      padding: 2.5rem 3rem;
+      color: white;
+    }
+    .cv-section-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #2b95c8;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid rgba(43, 149, 200, 0.15);
+    }
+    .cv-entry-title {
+      font-weight: 700;
+      color: #1f2937;
+    }
+    .cv-entry-sub {
+      color: #2b95c8;
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+    .cv-entry-date {
+      color: #9ca3af;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    .cv-entry-desc {
+      color: #6b7280;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    .print-btn {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: #2b95c8;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(43, 149, 200, 0.3);
+      transition: all 0.3s ease;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .print-btn:hover {
+      background: #2480ad;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(43, 149, 200, 0.4);
+    }
+    @media print {
+      body { background: white; }
+      .cv-container { box-shadow: none; margin: 0; border-radius: 0; }
+      .print-btn { display: none; }
+      .no-print { display: none; }
+      .cv-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+  <button class="print-btn no-print" onclick="window.print()">
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+    Descargar PDF
+  </button>
+
+  <div class="cv-container">
+    <!-- Header -->
+    <div class="cv-header">
+      <h1 class="text-3xl font-bold mb-1">Kandy Lorena Palomino Bolivar</h1>
+      <p class="text-white/80 text-lg">Full Stack Developer</p>
+      <div class="flex flex-wrap gap-4 mt-4 text-sm text-white/70">
+        <span>kandy.palomino@email.com</span>
+        <span>github.com/kandylorena</span>
+        <span>linkedin.com/in/kandylorena</span>
+      </div>
+    </div>
+
+    <div class="p-8 sm:p-10 space-y-8">
+      <!-- Perfil -->
+      <section>
+        <h2 class="cv-section-title">Perfil Profesional</h2>
+        <p class="text-gray-600 leading-relaxed">
+          Desarrolladora Full Stack con experiencia en la creación de aplicaciones web modernas y escalables.
+          Apasionada por transformar ideas en soluciones digitales funcionales, combinando diseño cuidado
+          con código limpio y buenas prácticas de desarrollo.
+        </p>
+      </section>
+
+      <!-- Experiencia -->
+      <section>
+        <h2 class="cv-section-title">Experiencia Laboral</h2>
+        <div class="space-y-5">
+          <div>
+            <div class="flex flex-wrap items-baseline justify-between gap-1 mb-1">
+              <span class="cv-entry-title">Full Stack Developer</span>
+              <span class="cv-entry-date">2024 — Presente</span>
+            </div>
+            <div class="cv-entry-sub">Empresa / Freelance</div>
+            <p class="cv-entry-desc mt-2">
+              Desarrollo de aplicaciones web utilizando React, Node.js y bases de datos relacionales y no relacionales.
+              Implementación de interfaces responsivas con Tailwind CSS y consumo de APIs REST.
+            </p>
+          </div>
+          <div>
+            <div class="flex flex-wrap items-baseline justify-between gap-1 mb-1">
+              <span class="cv-entry-title">Frontend Developer</span>
+              <span class="cv-entry-date">2023 — 2024</span>
+            </div>
+            <div class="cv-entry-sub">Agencia Digital</div>
+            <p class="cv-entry-desc mt-2">
+              Maquetación de landing pages y sitios web corporativos. Optimización de rendimiento web
+              y colaboración en equipos ágiles bajo metodología Scrum.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Educación -->
+      <section>
+        <h2 class="cv-section-title">Educación</h2>
+        <div class="space-y-4">
+          <div>
+            <div class="flex flex-wrap items-baseline justify-between gap-1 mb-1">
+              <span class="cv-entry-title">Bootcamp Full Stack</span>
+              <span class="cv-entry-date">2024</span>
+            </div>
+            <div class="cv-entry-sub">Platzi / OpenBootcamp</div>
+          </div>
+          <div>
+            <div class="flex flex-wrap items-baseline justify-between gap-1 mb-1">
+              <span class="cv-entry-title">Tecnología en Sistemas</span>
+              <span class="cv-entry-date">2020 — 2023</span>
+            </div>
+            <div class="cv-entry-sub">Universidad</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Habilidades Técnicas -->
+      <section>
+        <h2 class="cv-section-title">Habilidades Técnicas</h2>
+        <div class="flex flex-wrap gap-3">
+          <span class="skill-badge">HTML5</span>
+          <span class="skill-badge">CSS3</span>
+          <span class="skill-badge">JavaScript</span>
+          <span class="skill-badge">TypeScript</span>
+          <span class="skill-badge">React</span>
+          <span class="skill-badge">Vue.js</span>
+          <span class="skill-badge">Next.js</span>
+          <span class="skill-badge">Node.js</span>
+          <span class="skill-badge">Python</span>
+          <span class="skill-badge">Flutter</span>
+          <span class="skill-badge">MongoDB</span>
+          <span class="skill-badge">Firebase</span>
+          <span class="skill-badge">Tailwind CSS</span>
+          <span class="skill-badge">Git</span>
+        </div>
+      </section>
+
+      <!-- Idiomas -->
+      <section>
+        <h2 class="cv-section-title">Idiomas</h2>
+        <div class="flex flex-wrap gap-6">
+          <div>
+            <span class="font-semibold text-gray-900">Español</span>
+            <span class="text-gray-500 text-sm ml-2">Nativo</span>
+          </div>
+          <div>
+            <span class="font-semibold text-gray-900">Inglés</span>
+            <span class="text-gray-500 text-sm ml-2">Intermedio</span>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    if (window.location.search.includes('print=true')) {
+      window.onload = () => setTimeout(() => window.print(), 500);
+    }
+  </script>
+</body>
+</html>

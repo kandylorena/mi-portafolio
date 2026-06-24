@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
       await emailjs.send(
         'service_9j5d2da',
-        'service_9j5d2da',
+        'template_8eb3p7c',
         data
       );
       formMessage.className = 'text-sm text-center font-medium text-green-600';
@@ -103,14 +103,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.getElementById('viewCv').addEventListener('click', (e) => {
     e.preventDefault();
-    // Abrir CV en nueva pestaña (placeholder)
-    alert('Aquí irá el enlace para ver tu CV.');
+    window.open('cv.html', '_blank');
   });
 
   document.getElementById('downloadCv').addEventListener('click', (e) => {
     e.preventDefault();
-    // Descargar CV (placeholder)
-    alert('Aquí irá el enlace para descargar tu CV.');
+    window.open('cv.html?print=true', '_blank');
   });
 
   // ==============================
