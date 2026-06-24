@@ -7,49 +7,49 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="bg-[#291900] text-[#e2e2e2] font-sans">
+<body class="bg-white text-gray-800 font-sans antialiased">
   <!-- Navbar -->
-  <nav class="fixed top-0 left-0 w-full bg-[#291900]/90 backdrop-blur-sm z-50 border-b border-[#deb77d]/20">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="#" class="text-[#deb77d] font-bold text-xl tracking-tight">KLPB</a>
-      <ul class="flex gap-8 text-sm font-medium">
-        <li><a href="#proyectos" class="hover:text-[#deb77d] transition-colors">Proyectos</a></li>
-        <li><a href="#skills" class="hover:text-[#deb77d] transition-colors">Skills</a></li>
-        <li><a href="#contacto" class="hover:text-[#deb77d] transition-colors">Contacto</a></li>
+  <nav class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <a href="#" class="text-[#2b95c8] font-bold text-xl tracking-tight">KLPB</a>
+      <ul class="flex gap-6 sm:gap-8 text-sm font-medium text-gray-600">
+        <li><a href="#proyectos" class="hover:text-[#2b95c8] transition-colors">Proyectos</a></li>
+        <li><a href="#skills" class="hover:text-[#2b95c8] transition-colors">Skills</a></li>
+        <li><a href="#contacto" class="hover:text-[#2b95c8] transition-colors">Contacto</a></li>
       </ul>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <header class="min-h-screen flex items-center justify-center px-6 text-center">
-    <div>
-      <p class="text-[#deb77d] font-medium tracking-widest uppercase text-sm mb-4">Full Stack Developer</p>
-      <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
+  <header class="min-h-screen flex items-center justify-center px-4 sm:px-6 text-center bg-gradient-to-br from-white via-[#f0f7ff] to-[#f5f0ff]">
+    <div class="max-w-3xl mx-auto">
+      <p class="text-[#2b95c8] font-semibold tracking-widest uppercase text-xs sm:text-sm mb-4">Full Stack Developer</p>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 text-gray-900">
         Kandy Lorena<br />
-        <span class="text-[#deb77d]">Palomino Bolivar</span>
+        <span class="text-[#2b95c8]">Palomino Bolivar</span>
       </h1>
-      <p class="text-[#7a7672] max-w-xl mx-auto text-lg mb-8">
+      <p class="text-gray-500 max-w-xl mx-auto text-base sm:text-lg mb-10 leading-relaxed">
         Construyo experiencias digitales funcionales y con estilo. Transformo ideas en código limpio y aplicaciones modernas.
       </p>
-      <a href="#proyectos" class="inline-block bg-[#deb77d] text-[#291900] font-semibold px-8 py-3 rounded-full hover:bg-[#deddae] transition-all duration-300 shadow-lg hover:shadow-[#deb77d]/30">
+      <a href="#proyectos" class="inline-block bg-[#2b95c8] text-white font-semibold px-8 py-3.5 rounded-full hover:bg-[#2480ad] hover:shadow-lg hover:shadow-[#2b95c8]/25 transition-all duration-300">
         Ver Proyectos
       </a>
     </div>
   </header>
 
   <!-- Projects Section -->
-  <section id="proyectos" class="py-24 px-6 bg-[#1f1200]">
+  <section id="proyectos" class="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-[#faf9f7]">
     <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Proyectos</h2>
-      <p class="text-[#7a7672] text-center mb-14 max-w-lg mx-auto">Una muestra de mi trabajo — cada proyecto refleja atención al detalle y pasión por la tecnología.</p>
+      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-900">Proyectos</h2>
+      <p class="text-gray-500 text-center mb-12 sm:mb-14 max-w-lg mx-auto">Una muestra de mi trabajo — cada proyecto refleja atención al detalle y pasión por la tecnología.</p>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         <!-- Card 1 -->
-        <div class="card bg-[#2b1d0a] rounded-xl overflow-hidden border border-[#deb77d]/10 flex flex-col">
-          <img src="https://via.placeholder.com/600x400/3d2b14/deb77d?text=CryptoSphere" alt="CryptoSphere Dashboard" class="w-full h-48 object-cover" />
-          <div class="p-6 flex flex-col flex-1">
-            <h3 class="text-xl font-bold text-[#deb77d] mb-2">CryptoSphere Dashboard</h3>
-            <p class="text-[#7a7672] text-sm mb-4 flex-1">Panel interactivo para rastrear criptomonedas en tiempo real con gráficos dinámicos y modo oscuro.</p>
+        <div class="card bg-white rounded-xl overflow-hidden border border-gray-100 flex flex-col shadow-sm">
+          <img src="https://via.placeholder.com/600x400/e5e3bb/2b95c8?text=CryptoSphere" alt="CryptoSphere Dashboard" class="w-full h-44 sm:h-48 object-cover" />
+          <div class="p-5 sm:p-6 flex flex-col flex-1">
+            <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">CryptoSphere Dashboard</h3>
+            <p class="text-gray-500 text-sm mb-4 flex-1 leading-relaxed">Panel interactivo para rastrear criptomonedas en tiempo real con gráficos dinámicos y modo oscuro.</p>
             <div class="flex flex-wrap gap-2 mb-5">
               <span class="badge">React</span>
               <span class="badge">Tailwind CSS</span>
@@ -57,18 +57,18 @@
               <span class="badge">API</span>
             </div>
             <div class="flex gap-4 mt-auto">
-              <a href="#" class="text-sm text-[#deddae] hover:text-[#deb77d] transition-colors font-medium">GitHub →</a>
-              <a href="#" class="text-sm text-[#deddae] hover:text-[#deb77d] transition-colors font-medium">Live Demo →</a>
+              <a href="#" class="text-sm text-[#2b95c8] hover:text-[#2480ad] transition-colors font-medium">GitHub →</a>
+              <a href="#" class="text-sm text-[#2b95c8] hover:text-[#2480ad] transition-colors font-medium">Live Demo →</a>
             </div>
           </div>
         </div>
 
         <!-- Card 2 -->
-        <div class="card bg-[#2b1d0a] rounded-xl overflow-hidden border border-[#deb77d]/10 flex flex-col">
-          <img src="https://via.placeholder.com/600x400/3d2b14/deb77d?text=EcoMarket" alt="EcoMarket E-Commerce" class="w-full h-48 object-cover" />
-          <div class="p-6 flex flex-col flex-1">
-            <h3 class="text-xl font-bold text-[#deb77d] mb-2">EcoMarket E-Commerce</h3>
-            <p class="text-[#7a7672] text-sm mb-4 flex-1">Tienda en línea de productos ecológicos con cuadrícula de productos, filtros y pasarela de pago integrada.</p>
+        <div class="card bg-white rounded-xl overflow-hidden border border-gray-100 flex flex-col shadow-sm">
+          <img src="https://via.placeholder.com/600x400/e5cab0/2b95c8?text=EcoMarket" alt="EcoMarket E-Commerce" class="w-full h-44 sm:h-48 object-cover" />
+          <div class="p-5 sm:p-6 flex flex-col flex-1">
+            <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">EcoMarket E-Commerce</h3>
+            <p class="text-gray-500 text-sm mb-4 flex-1 leading-relaxed">Tienda en línea de productos ecológicos con cuadrícula de productos, filtros y pasarela de pago integrada.</p>
             <div class="flex flex-wrap gap-2 mb-5">
               <span class="badge">Next.js</span>
               <span class="badge">Stripe</span>
@@ -76,44 +76,44 @@
               <span class="badge">MongoDB</span>
             </div>
             <div class="flex gap-4 mt-auto">
-              <a href="#" class="text-sm text-[#deddae] hover:text-[#deb77d] transition-colors font-medium">GitHub →</a>
-              <a href="#" class="text-sm text-[#deddae] hover:text-[#deb77d] transition-colors font-medium">Live Demo →</a>
+              <a href="#" class="text-sm text-[#2b95c8] hover:text-[#2480ad] transition-colors font-medium">GitHub →</a>
+              <a href="#" class="text-sm text-[#2b95c8] hover:text-[#2480ad] transition-colors font-medium">Live Demo →</a>
             </div>
           </div>
         </div>
 
         <!-- Card 3 -->
-        <div class="card bg-[#2b1d0a] rounded-xl overflow-hidden border border-[#deb77d]/10 flex flex-col">
-          <img src="https://via.placeholder.com/600x400/3d2b14/deb77d?text=TaskFlow+Pro" alt="TaskFlow Pro SaaS" class="w-full h-48 object-cover" />
-          <div class="p-6 flex flex-col flex-1">
-            <h3 class="text-xl font-bold text-[#deb77d] mb-2">TaskFlow Pro (SaaS)</h3>
-            <p class="text-[#7a7672] text-sm mb-4 flex-1">Herramienta de gestión de tareas estilo Kanban para equipos remotos con funcionalidad drag & drop.</p>
+        <div class="card bg-white rounded-xl overflow-hidden border border-gray-100 flex flex-col shadow-sm">
+          <img src="https://via.placeholder.com/600x400/e2a8c3/2b95c8?text=TaskFlow+Pro" alt="TaskFlow Pro SaaS" class="w-full h-44 sm:h-48 object-cover" />
+          <div class="p-5 sm:p-6 flex flex-col flex-1">
+            <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">TaskFlow Pro (SaaS)</h3>
+            <p class="text-gray-500 text-sm mb-4 flex-1 leading-relaxed">Herramienta de gestión de tareas estilo Kanban para equipos remotos con funcionalidad drag & drop.</p>
             <div class="flex flex-wrap gap-2 mb-5">
               <span class="badge">TypeScript</span>
               <span class="badge">Vue.js</span>
               <span class="badge">Firebase</span>
             </div>
             <div class="flex gap-4 mt-auto">
-              <a href="#" class="text-sm text-[#deddae] hover:text-[#deb77d] transition-colors font-medium">GitHub →</a>
-              <a href="#" class="text-sm text-[#deddae] hover:text-[#deb77d] transition-colors font-medium">Live Demo →</a>
+              <a href="#" class="text-sm text-[#2b95c8] hover:text-[#2480ad] transition-colors font-medium">GitHub →</a>
+              <a href="#" class="text-sm text-[#2b95c8] hover:text-[#2480ad] transition-colors font-medium">Live Demo →</a>
             </div>
           </div>
         </div>
 
         <!-- Card 4 -->
-        <div class="card bg-[#2b1d0a] rounded-xl overflow-hidden border border-[#deb77d]/10 flex flex-col">
-          <img src="https://via.placeholder.com/600x400/3d2b14/deb77d?text=ChefBot+AI" alt="ChefBot AI Recipe Generator" class="w-full h-48 object-cover" />
-          <div class="p-6 flex flex-col flex-1">
-            <h3 class="text-xl font-bold text-[#deb77d] mb-2">ChefBot - AI Recipe Generator</h3>
-            <p class="text-[#7a7672] text-sm mb-4 flex-1">App mobile-first que genera recetas personalizadas con IA basadas en ingredientes disponibles.</p>
+        <div class="card bg-white rounded-xl overflow-hidden border border-gray-100 flex flex-col shadow-sm">
+          <img src="https://via.placeholder.com/600x400/c59ee1/ffffff?text=ChefBot+AI" alt="ChefBot AI Recipe Generator" class="w-full h-44 sm:h-48 object-cover" />
+          <div class="p-5 sm:p-6 flex flex-col flex-1">
+            <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">ChefBot - AI Recipe Generator</h3>
+            <p class="text-gray-500 text-sm mb-4 flex-1 leading-relaxed">App mobile-first que genera recetas personalizadas con IA basadas en ingredientes disponibles.</p>
             <div class="flex flex-wrap gap-2 mb-5">
               <span class="badge">Python</span>
               <span class="badge">Flutter</span>
               <span class="badge">OpenAI API</span>
             </div>
             <div class="flex gap-4 mt-auto">
-              <a href="#" class="text-sm text-[#deddae] hover:text-[#deb77d] transition-colors font-medium">GitHub →</a>
-              <a href="#" class="text-sm text-[#deddae] hover:text-[#deb77d] transition-colors font-medium">Live Demo →</a>
+              <a href="#" class="text-sm text-[#2b95c8] hover:text-[#2480ad] transition-colors font-medium">GitHub →</a>
+              <a href="#" class="text-sm text-[#2b95c8] hover:text-[#2480ad] transition-colors font-medium">Live Demo →</a>
             </div>
           </div>
         </div>
@@ -122,11 +122,11 @@
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" class="py-24 px-6">
+  <section id="skills" class="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
     <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4">Habilidades</h2>
-      <p class="text-[#7a7672] mb-14 max-w-lg mx-auto">Tecnologías y herramientas con las que trabajo día a día.</p>
-      <div class="flex flex-wrap justify-center gap-4">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">Habilidades</h2>
+      <p class="text-gray-500 mb-12 sm:mb-14 max-w-lg mx-auto">Tecnologías y herramientas con las que trabajo día a día.</p>
+      <div class="flex flex-wrap justify-center gap-3 sm:gap-4">
         <span class="skill-badge">HTML5</span>
         <span class="skill-badge">CSS3</span>
         <span class="skill-badge">JavaScript</span>
@@ -146,22 +146,22 @@
   </section>
 
   <!-- Contact / Footer -->
-  <footer id="contacto" class="py-16 px-6 border-t border-[#deb77d]/10">
+  <footer id="contacto" class="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-[#faf9f7] border-t border-gray-100">
     <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4">Contacto</h2>
-      <p class="text-[#7a7672] mb-10 max-w-md mx-auto">¿Tienes un proyecto en mente? Hablemos.</p>
-      <div class="flex justify-center gap-6 mb-12">
-        <a href="#" class="social-icon" title="GitHub">
-          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg>
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">Contacto</h2>
+      <p class="text-gray-500 mb-10 max-w-md mx-auto">¿Tienes un proyecto en mente? Hablemos.</p>
+      <div class="flex justify-center gap-4 sm:gap-6 mb-10 sm:mb-12">
+        <a href="#" class="social-icon" title="GitHub" aria-label="GitHub">
+          <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg>
         </a>
-        <a href="#" class="social-icon" title="LinkedIn">
-          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        <a href="#" class="social-icon" title="LinkedIn" aria-label="LinkedIn">
+          <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
         </a>
-        <a href="mailto:kandy.palomino@email.com" class="social-icon" title="Email">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        <a href="mailto:kandy.palomino@email.com" class="social-icon" title="Email" aria-label="Email">
+          <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
         </a>
       </div>
-      <p class="text-[#7a7672] text-sm">&copy; 2026 Kandy Lorena Palomino Bolivar. Todos los derechos reservados.</p>
+      <p class="text-gray-400 text-xs sm:text-sm">&copy; 2026 Kandy Lorena Palomino Bolivar. Todos los derechos reservados.</p>
     </div>
   </footer>
 

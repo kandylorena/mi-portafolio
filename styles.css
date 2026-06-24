@@ -7,67 +7,68 @@ html {
 }
 
 .card:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 12px 30px rgba(222, 183, 125, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(43, 149, 200, 0.1);
 }
 
 .badge {
   display: inline-block;
-  padding: 0.25rem 0.75rem;
-  font-size: 0.75rem;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.7rem;
   font-weight: 600;
   border-radius: 9999px;
-  background-color: rgba(222, 183, 125, 0.12);
-  color: #deddae;
+  background-color: rgba(43, 149, 200, 0.08);
+  color: #2b95c8;
   letter-spacing: 0.025em;
   transition: background-color 0.2s ease;
 }
 
 .badge:hover {
-  background-color: rgba(222, 183, 125, 0.25);
+  background-color: rgba(43, 149, 200, 0.18);
 }
 
 .skill-badge {
   display: inline-block;
-  padding: 0.6rem 1.4rem;
-  font-size: 0.875rem;
+  padding: 0.55rem 1.3rem;
+  font-size: 0.85rem;
   font-weight: 500;
   border-radius: 9999px;
-  background-color: #2b1d0a;
-  color: #deb77d;
-  border: 1px solid rgba(222, 183, 125, 0.15);
+  background-color: white;
+  color: #2b95c8;
+  border: 1.5px solid rgba(43, 149, 200, 0.15);
   transition: all 0.25s ease;
 }
 
 .skill-badge:hover {
-  background-color: #deb77d;
-  color: #291900;
-  border-color: #deb77d;
+  background-color: #2b95c8;
+  color: white;
+  border-color: #2b95c8;
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(43, 149, 200, 0.2);
 }
 
 .social-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 3rem;
-  height: 3rem;
+  width: 2.75rem;
+  height: 2.75rem;
   border-radius: 50%;
-  background-color: #2b1d0a;
-  color: #7a7672;
-  border: 1px solid rgba(222, 183, 125, 0.1);
+  background-color: white;
+  color: #6b7280;
+  border: 1.5px solid #e5e7eb;
   transition: all 0.3s ease;
 }
 
 .social-icon:hover {
-  background-color: #deb77d;
-  color: #291900;
-  border-color: #deb77d;
+  background-color: #2b95c8;
+  color: white;
+  border-color: #2b95c8;
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(222, 183, 125, 0.25);
+  box-shadow: 0 6px 20px rgba(43, 149, 200, 0.25);
 }
 
 ::selection {
-  background-color: #deb77d;
-  color: #291900;
+  background-color: #2b95c8;
+  color: white;
 }
