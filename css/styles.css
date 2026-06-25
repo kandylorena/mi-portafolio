@@ -272,16 +272,16 @@ input:focus, textarea:focus {
 
 .about-section {
   position: relative;
-  background-image: url('../img/fondo portafolio.jpg');
+  background-image: url('../img/fondo-portafolio.jpg');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
 }
 
 .about-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
 }
 
 .about-text {
