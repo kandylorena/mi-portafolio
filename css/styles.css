@@ -280,14 +280,14 @@ input:focus, textarea:focus {
 .about-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(255, 255, 255, 0.5);
   z-index: 1;
 }
 
 .about-text {
   font-size: 1rem;
   line-height: 1.8;
-  color: rgba(255, 255, 255, 0.9);
+  color: #374151;
 }
 
 .about-text p + p {
@@ -295,7 +295,7 @@ input:focus, textarea:focus {
 }
 
 .about-highlight {
-  color: #60b8e0;
+  color: #2b95c8;
   font-weight: 600;
 }
 
