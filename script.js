@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
       await emailjs.send(
         'service_9j5d2da',
-        'template_x3wqfjg',
+        'template_v2ydq1f',
         data
       );
       formMessage.className = 'text-sm text-center font-medium text-green-600';
