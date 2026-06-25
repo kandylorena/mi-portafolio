@@ -204,6 +204,137 @@ input:focus, textarea:focus {
 }
 
 /* ==============================
+   SKILLS CATEGORIES
+   ============================== */
+.skill-category {
+  background: white;
+  border: 1px solid #f0f0f0;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.skill-category:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.skill-category h3 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #2b95c8;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid rgba(43, 149, 200, 0.1);
+}
+
+.skill-category .skill-badge {
+  font-size: 0.8rem;
+  padding: 0.45rem 1.1rem;
+}
+
+/* ==============================
+   TIMELINE
+   ============================== */
+.timeline {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0.5rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 24px;
+  top: 0;
+  bottom: 0;
+  width: 2.5px;
+  background: linear-gradient(to bottom, #2b95c8, #c59ee1);
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 64px;
+  padding-bottom: 2rem;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 14px;
+  top: 4px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #2b95c8;
+  border: 4px solid white;
+  box-shadow: 0 0 0 2.5px #2b95c8;
+  z-index: 1;
+}
+
+.timeline-item:nth-child(even) .timeline-marker {
+  background: #c59ee1;
+  box-shadow: 0 0 0 2.5px #c59ee1;
+}
+
+.timeline-card {
+  background: white;
+  border: 1px solid #f0f0f0;
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.timeline-card:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.timeline-card h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1f2937;
+  line-height: 1.4;
+}
+
+.timeline-number {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #2b95c8;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-item:nth-child(even) .timeline-number {
+  color: #c59ee1;
+}
+
+/* ==============================
+   ABOUT SECTION
+   ============================== */
+.about-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #4b5563;
+}
+
+.about-text p + p {
+  margin-top: 1rem;
+}
+
+.about-highlight {
+  color: #2b95c8;
+  font-weight: 600;
+}
+
+/* ==============================
    SELECTION
    ============================== */
 ::selection {

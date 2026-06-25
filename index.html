@@ -22,8 +22,10 @@
   <nav class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
       <a href="#" class="text-[#2b95c8] font-bold text-xl tracking-tight">KLPB</a>
-      <ul class="flex gap-6 sm:gap-8 text-sm font-medium text-gray-600">
+      <ul class="flex gap-4 sm:gap-6 text-sm font-medium text-gray-600">
+        <li><a href="#sobre-mi" class="hover:text-[#2b95c8] transition-colors">Sobre Mí</a></li>
         <li><a href="#proyectos" class="hover:text-[#2b95c8] transition-colors">Proyectos</a></li>
+        <li><a href="#trayectoria" class="hover:text-[#2b95c8] transition-colors">Trayectoria</a></li>
         <li><a href="#skills" class="hover:text-[#2b95c8] transition-colors">Skills</a></li>
         <li><a href="#" id="contactBtn" class="hover:text-[#2b95c8] transition-colors">Contacto</a></li>
       </ul>
@@ -39,7 +41,7 @@
         <span class="text-[#2b95c8]">Palomino Bolivar</span>
       </h1>
       <p class="text-gray-500 max-w-xl mx-auto text-base sm:text-lg mb-10 leading-relaxed">
-        Construyo experiencias digitales funcionales y con estilo. Transformo ideas en código limpio y aplicaciones modernas.
+        Desarrolladora junior en formación, construyendo aplicaciones web completas con <span class="about-highlight">Python</span>, <span class="about-highlight">Django</span> y tecnologías modernas.
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
         <a href="#proyectos" class="bg-[#2b95c8] text-white font-semibold px-8 py-3.5 rounded-full hover:bg-[#2480ad] hover:shadow-lg hover:shadow-[#2b95c8]/25 transition-all duration-300">
@@ -67,25 +69,49 @@
   <!-- Section Divider -->
   <div class="section-divider"></div>
 
+  <!-- About Section -->
+  <section id="sobre-mi" class="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-[#faf9f7]">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-900">Sobre Mí</h2>
+      <p class="text-gray-500 text-center mb-10 max-w-lg mx-auto">Mi camino en el desarrollo de software.</p>
+      <div class="about-text">
+        <p>
+          Soy una <span class="about-highlight">desarrolladora junior en formación</span>, actualmente completando un programa especializado que abarca desde los fundamentos de la programación hasta el desarrollo web con Django y bases de datos relacionales. Mi enfoque está en construir una base sólida en Python, desarrollo front-end y back-end para convertirme en una profesional versátil.
+        </p>
+        <p>
+          Mi camino de aprendizaje actual incluye: Fundamentos de Desarrollo Front-End, Fundamentos de Programación en Python, Programación Avanzada en Python, Bases de Datos Relacionales, Desarrollo Web con Django, y Acceso a Datos en Django. Cada uno de estos módulos me acerca más a dominar las herramientas necesarias para crear aplicaciones completas, dinámicas y funcionales.
+        </p>
+        <p>
+          Actualmente, estoy buscando mi <span class="about-highlight">primera oportunidad profesional</span> donde pueda aplicar lo aprendido, seguir creciendo técnicamente y contribuir a proyectos reales con total dedicación y entusiasmo.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Divider -->
+  <div class="section-divider"></div>
+
   <!-- Projects Section -->
   <section id="proyectos" class="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-900">Proyectos</h2>
-      <p class="text-gray-500 text-center mb-12 sm:mb-14 max-w-lg mx-auto">Una muestra de mi trabajo — cada proyecto refleja atención al detalle y pasión por la tecnología.</p>
+      <p class="text-gray-500 text-center mb-12 sm:mb-14 max-w-lg mx-auto">Proyectos reales y en desarrollo que reflejan mi crecimiento como desarrolladora.</p>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-        <!-- Card 1 - CryptoSphere -->
+        <!-- Card 1 - Sistema de Gestión Empresarial -->
         <div class="card card-accent-blue rounded-xl overflow-hidden flex flex-col shadow-sm bg-white border border-gray-100">
           <div class="card-accent-bar bg-[#2b95c8]"></div>
-          <img src="https://via.placeholder.com/600x400/e5e3bb/2b95c8?text=CryptoSphere" alt="CryptoSphere Dashboard" class="w-full h-44 sm:h-48 object-cover" />
+          <img src="https://via.placeholder.com/600x400/e5e3bb/2b95c8?text=Gesti%C3%B3n+Empresarial" alt="Sistema de Gestión Empresarial" class="w-full h-44 sm:h-48 object-cover" />
           <div class="p-5 sm:p-6 flex flex-col flex-1">
-            <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">CryptoSphere Dashboard</h3>
-            <p class="text-gray-500 text-sm mb-4 flex-1 leading-relaxed">Panel interactivo para rastrear criptomonedas en tiempo real con gráficos dinámicos y modo oscuro.</p>
+            <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Sistema de Gestión Empresarial</h3>
+            <p class="text-gray-500 text-sm mb-4 flex-1 leading-relaxed">Aplicación web con Django y MySQL Workbench enfocada en escalamiento, mejora y agilidad de procesos empresariales.</p>
             <div class="flex flex-wrap gap-2 mb-5">
-              <span class="badge badge-blue">React</span>
-              <span class="badge badge-blue">Tailwind CSS</span>
-              <span class="badge badge-blue">Chart.js</span>
-              <span class="badge badge-blue">API</span>
+              <span class="badge badge-blue">Python</span>
+              <span class="badge badge-blue">Django</span>
+              <span class="badge badge-blue">MySQL Workbench</span>
+              <span class="badge badge-blue">Bootstrap</span>
+              <span class="badge badge-blue">HTML5</span>
+              <span class="badge badge-blue">CSS3</span>
             </div>
             <div class="flex gap-4 mt-auto pt-3 border-t border-gray-50">
               <a href="#" class="text-sm font-medium text-[#2b95c8] hover:text-[#2480ad] transition-colors">GitHub →</a>
@@ -94,61 +120,103 @@
           </div>
         </div>
 
-        <!-- Card 2 - EcoMarket -->
+        <!-- Card 2 - Mis Apuntes -->
         <div class="card card-accent-purple rounded-xl overflow-hidden flex flex-col shadow-sm bg-white border border-gray-100">
           <div class="card-accent-bar bg-[#c59ee1]"></div>
-          <img src="https://via.placeholder.com/600x400/f0e6f6/c59ee1?text=EcoMarket" alt="EcoMarket E-Commerce" class="w-full h-44 sm:h-48 object-cover" />
+          <img src="https://via.placeholder.com/600x400/f0e6f6/c59ee1?text=Mis+Apuntes" alt="Mis Apuntes" class="w-full h-44 sm:h-48 object-cover" />
           <div class="p-5 sm:p-6 flex flex-col flex-1">
-            <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">EcoMarket E-Commerce</h3>
-            <p class="text-gray-500 text-sm mb-4 flex-1 leading-relaxed">Tienda en línea de productos ecológicos con cuadrícula de productos, filtros y pasarela de pago integrada.</p>
+            <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Mis Apuntes</h3>
+            <p class="text-gray-500 text-sm mb-4 flex-1 leading-relaxed">Aplicación con IA para gestión de agenda y calendario universitario. Ayuda a organizar apuntes, tareas y horarios académicos.</p>
             <div class="flex flex-wrap gap-2 mb-5">
-              <span class="badge badge-purple">Next.js</span>
-              <span class="badge badge-purple">Stripe</span>
-              <span class="badge badge-purple">Node.js</span>
-              <span class="badge badge-purple">MongoDB</span>
+              <span class="badge badge-purple">Python</span>
+              <span class="badge badge-purple">Django</span>
+              <span class="badge badge-purple">En desarrollo</span>
             </div>
             <div class="flex gap-4 mt-auto pt-3 border-t border-gray-50">
-              <a href="#" class="text-sm font-medium text-[#c59ee1] hover:text-[#b07dd4] transition-colors">GitHub →</a>
-              <a href="#" class="text-sm font-medium text-[#c59ee1] hover:text-[#b07dd4] transition-colors">Live Demo →</a>
+              <span class="text-xs text-gray-400 italic">Próximamente</span>
             </div>
           </div>
         </div>
 
-        <!-- Card 3 - TaskFlow Pro -->
+        <!-- Card 3 - Web Repostería -->
         <div class="card card-accent-pink rounded-xl overflow-hidden flex flex-col shadow-sm bg-white border border-gray-100">
           <div class="card-accent-bar bg-[#e2a8c3]"></div>
-          <img src="https://via.placeholder.com/600x400/fce8f0/e2a8c3?text=TaskFlow+Pro" alt="TaskFlow Pro SaaS" class="w-full h-44 sm:h-48 object-cover" />
+          <img src="https://via.placeholder.com/600x400/fce8f0/e2a8c3?text=Reposter%C3%ADa+PYME" alt="Web Repostería PYME" class="w-full h-44 sm:h-48 object-cover" />
           <div class="p-5 sm:p-6 flex flex-col flex-1">
-            <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">TaskFlow Pro (SaaS)</h3>
-            <p class="text-gray-500 text-sm mb-4 flex-1 leading-relaxed">Herramienta de gestión de tareas estilo Kanban para equipos remotos con funcionalidad drag & drop.</p>
+            <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Web Repostería PYME</h3>
+            <p class="text-gray-500 text-sm mb-4 flex-1 leading-relaxed">Sitio web profesional para una pequeña empresa de repostería con catálogo de productos, pedidos online y galería visual.</p>
             <div class="flex flex-wrap gap-2 mb-5">
-              <span class="badge badge-pink">TypeScript</span>
-              <span class="badge badge-pink">Vue.js</span>
-              <span class="badge badge-pink">Firebase</span>
+              <span class="badge badge-pink">HTML5</span>
+              <span class="badge badge-pink">CSS3</span>
+              <span class="badge badge-pink">JavaScript</span>
+              <span class="badge badge-pink">En desarrollo</span>
             </div>
             <div class="flex gap-4 mt-auto pt-3 border-t border-gray-50">
-              <a href="#" class="text-sm font-medium text-[#e2a8c3] hover:text-[#d483a8] transition-colors">GitHub →</a>
-              <a href="#" class="text-sm font-medium text-[#e2a8c3] hover:text-[#d483a8] transition-colors">Live Demo →</a>
+              <span class="text-xs text-gray-400 italic">Próximamente</span>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Card 4 - ChefBot -->
-        <div class="card card-accent-peach rounded-xl overflow-hidden flex flex-col shadow-sm bg-white border border-gray-100">
-          <div class="card-accent-bar bg-[#e5cab0]"></div>
-          <img src="https://via.placeholder.com/600x400/fdf0e6/e5cab0?text=ChefBot+AI" alt="ChefBot AI Recipe Generator" class="w-full h-44 sm:h-48 object-cover" />
-          <div class="p-5 sm:p-6 flex flex-col flex-1">
-            <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">ChefBot - AI Recipe Generator</h3>
-            <p class="text-gray-500 text-sm mb-4 flex-1 leading-relaxed">App mobile-first que genera recetas personalizadas con IA basadas en ingredientes disponibles.</p>
-            <div class="flex flex-wrap gap-2 mb-5">
-              <span class="badge badge-peach">Python</span>
-              <span class="badge badge-peach">Flutter</span>
-              <span class="badge badge-peach">OpenAI API</span>
-            </div>
-            <div class="flex gap-4 mt-auto pt-3 border-t border-gray-50">
-              <a href="#" class="text-sm font-medium text-[#e5cab0] hover:text-[#d9b091] transition-colors">GitHub →</a>
-              <a href="#" class="text-sm font-medium text-[#e5cab0] hover:text-[#d9b091] transition-colors">Live Demo →</a>
-            </div>
+  <!-- Section Divider -->
+  <div class="section-divider"></div>
+
+  <!-- Trayectoria Section -->
+  <section id="trayectoria" class="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-900">Mi Trayectoria de Aprendizaje</h2>
+      <p class="text-gray-500 text-center mb-12 sm:mb-14 max-w-lg mx-auto">Módulos completados en mi formación como desarrolladora.</p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <span class="timeline-number">01</span>
+            <h4>Orientación al Perfil y Metodología del Curso</h4>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <span class="timeline-number">02</span>
+            <h4>Fundamentos de Desarrollo Front-End</h4>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <span class="timeline-number">03</span>
+            <h4>Fundamentos de Programación en Python</h4>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <span class="timeline-number">04</span>
+            <h4>Programación Avanzada en Python (V2)</h4>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <span class="timeline-number">05</span>
+            <h4>Fundamentos de Bases de Datos Relacionales</h4>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <span class="timeline-number">06</span>
+            <h4>Desarrollo de Aplicaciones Web con Python Django (V2)</h4>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <span class="timeline-number">07</span>
+            <h4>Acceso a Datos en Aplicaciones Python Django (V2)</h4>
           </div>
         </div>
       </div>
@@ -160,24 +228,39 @@
 
   <!-- Skills Section -->
   <section id="skills" class="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-[#faf9f7]">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">Habilidades</h2>
-      <p class="text-gray-500 mb-12 sm:mb-14 max-w-lg mx-auto">Tecnologías y herramientas con las que trabajo día a día.</p>
-      <div class="flex flex-wrap justify-center gap-3 sm:gap-4">
-        <span class="skill-badge">HTML5</span>
-        <span class="skill-badge">CSS3</span>
-        <span class="skill-badge">JavaScript</span>
-        <span class="skill-badge">TypeScript</span>
-        <span class="skill-badge">React</span>
-        <span class="skill-badge">Vue.js</span>
-        <span class="skill-badge">Next.js</span>
-        <span class="skill-badge">Node.js</span>
-        <span class="skill-badge">Python</span>
-        <span class="skill-badge">Flutter</span>
-        <span class="skill-badge">MongoDB</span>
-        <span class="skill-badge">Firebase</span>
-        <span class="skill-badge">Tailwind CSS</span>
-        <span class="skill-badge">Git</span>
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-900">Habilidades</h2>
+      <p class="text-gray-500 text-center mb-12 sm:mb-14 max-w-lg mx-auto">Tecnologías y herramientas con las que trabajo día a día.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="skill-category">
+          <h3>Front-End</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-badge">HTML5</span>
+            <span class="skill-badge">CSS3</span>
+            <span class="skill-badge">JavaScript</span>
+            <span class="skill-badge">Bootstrap</span>
+            <span class="skill-badge">Tailwind CSS</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Back-End</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-badge">Python</span>
+            <span class="skill-badge">Django</span>
+            <span class="skill-badge">PostgreSQL</span>
+            <span class="skill-badge">MySQL Workbench</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Herramientas</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-badge">Git</span>
+            <span class="skill-badge">GitHub</span>
+            <span class="skill-badge">Docker</span>
+            <span class="skill-badge">OpenCode</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
