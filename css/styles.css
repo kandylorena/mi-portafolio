@@ -270,37 +270,24 @@ input:focus, textarea:focus {
   line-height: 1.4;
 }
 
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  align-items: center;
+.about-section {
+  position: relative;
+  background-image: url('../img/fondo portafolio.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-@media (min-width: 768px) {
-  .about-grid {
-    grid-template-columns: 300px 1fr;
-  }
-}
-
-.about-image {
-  display: flex;
-  justify-content: center;
-}
-
-.about-image img {
-  width: 100%;
-  max-width: 280px;
-  height: auto;
-  border-radius: 1rem;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-  object-fit: cover;
+.about-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
 }
 
 .about-text {
   font-size: 1rem;
   line-height: 1.8;
-  color: #4b5563;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .about-text p + p {
@@ -308,7 +295,7 @@ input:focus, textarea:focus {
 }
 
 .about-highlight {
-  color: #2b95c8;
+  color: #60b8e0;
   font-weight: 600;
 }
 
