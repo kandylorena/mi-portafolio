@@ -4,9 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kandy Lorena Palomino Bolivar | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/styles.css" />
-  
+
   <!-- INTEGRACIÓN Y CONFIGURACIÓN DE EMAILJS -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script type="text/javascript">
@@ -17,46 +20,79 @@
     })();
   </script>
 </head>
-<body class="bg-white text-gray-800 font-sans antialiased">
-  <!-- Navbar -->
-  <nav class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-      <a href="#" class="text-[#2b95c8] font-bold text-xl tracking-tight">KLPB</a>
-      <ul class="flex gap-4 sm:gap-6 text-sm font-medium text-gray-600">
-        <li><a href="#sobre-mi" class="hover:text-[#2b95c8] transition-colors">Sobre Mí</a></li>
-        <li><a href="#proyectos" class="hover:text-[#2b95c8] transition-colors">Proyectos</a></li>
-        <li><a href="#trayectoria" class="hover:text-[#2b95c8] transition-colors">Trayectoria</a></li>
-        <li><a href="#skills" class="hover:text-[#2b95c8] transition-colors">Skills</a></li>
-        <li><a href="#" id="contactBtn" class="hover:text-[#2b95c8] transition-colors">Contacto</a></li>
+<body class="text-gray-800 font-sans antialiased">
+
+  <!-- ===== FONDO: Partículas animadas (canvas) ===== -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- ===== FONDO: Líneas de constelación (SVG) ===== -->
+  <div class="bg-lines" aria-hidden="true">
+    <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M100 200 Q 300 100, 500 250 T 900 150" stroke="white" stroke-width="0.8" stroke-dasharray="4 6"/>
+      <path d="M200 600 Q 450 400, 700 550 T 1100 400" stroke="white" stroke-width="0.6" stroke-dasharray="3 8"/>
+      <path d="M50 800 Q 250 650, 450 800 T 850 700" stroke="white" stroke-width="0.5" stroke-dasharray="2 10"/>
+      <path d="M600 100 Q 800 300, 1000 150 T 1300 250" stroke="white" stroke-width="0.7" stroke-dasharray="5 7"/>
+      <path d="M300 300 Q 500 500, 700 300 T 1100 500" stroke="white" stroke-width="0.4" stroke-dasharray="2 12"/>
+      <path d="M800 600 Q 1000 750, 1200 600 T 1400 700" stroke="white" stroke-width="0.6" stroke-dasharray="4 5"/>
+      <circle cx="120" cy="180" r="2" fill="white" opacity="0.4"/>
+      <circle cx="480" cy="260" r="1.5" fill="white" opacity="0.3"/>
+      <circle cx="920" cy="140" r="2.5" fill="white" opacity="0.5"/>
+      <circle cx="620" cy="520" r="1.8" fill="white" opacity="0.35"/>
+      <circle cx="1050" cy="380" r="2" fill="white" opacity="0.4"/>
+      <circle cx="250" cy="650" r="1.5" fill="white" opacity="0.3"/>
+      <circle cx="750" cy="720" r="2.2" fill="white" opacity="0.45"/>
+      <circle cx="1300" cy="250" r="1.8" fill="white" opacity="0.35"/>
+    </svg>
+  </div>
+
+  <!-- ============================================= -->
+  <!-- NAVBAR -->
+  <!-- ============================================= -->
+  <nav class="nav-glass fixed top-0 left-0 w-full z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="text-white font-bold text-lg tracking-[0.15em]">Mi portafolio</a>
+      <ul class="hidden md:flex items-center gap-8">
+        <li><a href="#sobre-mi" class="nav-link text-sm">Sobre Mí</a></li>
+        <li><a href="#proyectos" class="nav-link text-sm">Proyectos</a></li>
+        <li><a href="#trayectoria" class="nav-link text-sm">Trayectoria</a></li>
+        <li><a href="#skills" class="nav-link text-sm">Skills</a></li>
+        <li><a href="#" id="contactBtn" class="nav-link text-sm">Contacto</a></li>
       </ul>
+      <div class="flex items-center gap-3">
+        <span class="nav-avatar">K</span>
+        <span class="hidden sm:inline text-white text-sm font-medium">Kandy</span>
+        <svg class="w-4 h-4 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <header class="min-h-screen flex items-center justify-center px-4 sm:px-6 text-center bg-gradient-to-br from-white via-[#f0f7ff] to-[#f5f0ff]">
+  <!-- ============================================= -->
+  <!-- HERO -->
+  <!-- ============================================= -->
+  <header class="relative z-10 min-h-screen flex items-center justify-center px-4 sm:px-6 text-center">
     <div class="max-w-3xl mx-auto">
-      <p class="text-[#2b95c8] font-semibold tracking-widest uppercase text-xs sm:text-sm mb-4">Junior Full Stack Developer</p>
-      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 text-gray-900">
+      <p class="text-white/90 font-semibold tracking-[0.2em] uppercase text-xs sm:text-sm mb-4">Junior Full Stack Developer</p>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 text-white">
         Kandy Lorena<br />
-        <span class="text-[#2b95c8]">Palomino Bolivar</span>
+        <span class="text-white">Palomino Bolivar</span>
       </h1>
-      <p class="text-gray-500 max-w-xl mx-auto text-base sm:text-lg mb-10 leading-relaxed">
-        Desarrolladora junior en formación, construyendo aplicaciones web completas con <span class="about-highlight">Python</span>, <span class="about-highlight">Django</span> y tecnologías modernas.
+      <p class="text-white/85 max-w-xl mx-auto text-base sm:text-lg mb-10 leading-relaxed">
+        Desarrolladora junior en formación, construyendo aplicaciones web completas con <span class="about-highlight text-white">Python</span>, <span class="about-highlight text-white">Django</span> y tecnologías modernas.
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="#proyectos" class="bg-[#2b95c8] text-white font-semibold px-8 py-3.5 rounded-full hover:bg-[#2480ad] hover:shadow-lg hover:shadow-[#2b95c8]/25 transition-all duration-300">
+        <a href="#proyectos" class="bg-white text-[#6d28d9] font-semibold px-8 py-3.5 rounded-full hover:bg-white/90 hover:shadow-lg hover:shadow-white/25 transition-all duration-300">
           Ver Proyectos
         </a>
         <div class="cv-dropdown relative">
-          <button id="cvBtn" class="bg-white text-[#2b95c8] font-semibold px-8 py-3.5 rounded-full border-2 border-[#2b95c8] hover:bg-[#2b95c8] hover:text-white transition-all duration-300">
+          <button id="cvBtn" class="bg-white text-[#6d28d9] font-semibold px-8 py-3.5 rounded-full hover:bg-white/90 hover:shadow-lg hover:shadow-white/25 transition-all duration-300">
             Mi CV
           </button>
           <div id="cvMenu" class="cv-menu hidden absolute top-full mt-2 left-1/2 -translate-x-1/2 bg-white rounded-xl shadow-lg border border-gray-100 py-2 min-w-[180px] overflow-hidden">
-            <a href="#" class="cv-option flex items-center gap-3 px-5 py-3 text-sm text-gray-700 hover:bg-[#f0f7ff] hover:text-[#2b95c8] transition-colors" id="viewCv">
+            <a href="#" class="cv-option flex items-center gap-3 px-5 py-3 text-sm text-gray-700 hover:bg-[#f5f3ff] hover:text-[#6d28d9] transition-colors" id="viewCv">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
               Ver CV
             </a>
-            <a href="#" class="cv-option flex items-center gap-3 px-5 py-3 text-sm text-gray-700 hover:bg-[#f0f7ff] hover:text-[#2b95c8] transition-colors" id="downloadCv">
+            <a href="#" class="cv-option flex items-center gap-3 px-5 py-3 text-sm text-gray-700 hover:bg-[#f5f3ff] hover:text-[#6d28d9] transition-colors" id="downloadCv">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
               Descargar CV
             </a>
@@ -67,12 +103,13 @@
   </header>
 
   <!-- Section Divider -->
-  <div class="section-divider"></div>
+  <div class="section-divider relative z-10"></div>
 
-  <!-- About Section -->
-  <section id="sobre-mi" class="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 about-section">
-    <div class="about-overlay"></div>
-    <div class="max-w-3xl mx-auto relative z-10">
+  <!-- ============================================= -->
+  <!-- ABOUT -->
+  <!-- ============================================= -->
+  <section id="sobre-mi" class="relative z-10 py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto glass-section">
       <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-900">Sobre Mí</h2>
       <p class="text-gray-500 text-center mb-10 max-w-lg mx-auto">Mi camino en el desarrollo de software.</p>
       <div class="about-text">
@@ -90,86 +127,219 @@
   </section>
 
   <!-- Section Divider -->
-  <div class="section-divider"></div>
+  <div class="section-divider relative z-10"></div>
 
-  <!-- Projects Section -->
-  <section id="proyectos" class="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+  <!-- ============================================= -->
+  <!-- PROJECTS — Panel de cristal + 8 cards -->
+  <!-- ============================================= -->
+  <section id="proyectos" class="relative z-10 py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
     <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-900">Proyectos</h2>
-      <p class="text-gray-500 text-center mb-12 sm:mb-14 max-w-lg mx-auto">Proyectos reales y en desarrollo que reflejan mi crecimiento como desarrolladora.</p>
+      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4 text-white">Proyectos</h2>
+      <p class="text-white/70 text-center mb-10 max-w-lg mx-auto">Proyectos reales y en desarrollo que reflejan mi crecimiento como desarrolladora.</p>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-        <!-- Card 1 - Sistema de Gestión Empresarial -->
-        <div class="card card-accent-blue rounded-xl overflow-hidden flex flex-col shadow-sm bg-white border border-gray-100">
-          <div class="card-accent-bar bg-[#2b95c8]"></div>
-          <img src="/img/imagen_proyecto.jpg" alt="Deli Detalles" class="w-full h-44 sm:h-48 object-cover" />
-          <div class="p-5 sm:p-6 flex flex-col flex-1">
-            <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Deli Detalles</h3>
-            <p class="text-gray-500 text-sm mb-4 flex-1 leading-relaxed">Aplicación web con Django y sql y deployado en render. Permite gestionar productos, clientes y pedidos de manera eficiente para una pequeña empresa de repostería.</p>
-              <span class="badge badge-blue">Python</span>
-              <span class="badge badge-blue">Django</span>
-              <span class="badge badge-blue">sql</span>
-              <span class="badge badge-blue">tailwind</span>
-              <span class="badge badge-blue">HTML5</span>
-              <span class="badge badge-blue">CSS3</span>
+      <div class="glass-panel">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+          <!-- Card 1 — Deli Detalles -->
+          <div class="glass-card group">
+            <div class="relative overflow-hidden">
+              <img src="/img/imagen_proyecto.jpg" alt="Deli Detalles" class="card-img" />
             </div>
-            <div class="flex gap-4 mt-auto pt-3 border-t border-gray-50">
-              <a href="https://github.com/kandylorena/mi-portafolio.git" class="text-sm font-medium text-[#2b95c8] hover:text-[#2480ad] transition-colors">GitHub →</a>
-              <a href="https://appdelidetalles.onrender.com" class="text-sm font-medium text-[#2b95c8] hover:text-[#2480ad] transition-colors">Live Demo →</a>
+            <div class="card-body">
+              <span class="text-[10px] uppercase tracking-[0.15em] text-gray-400 font-semibold mb-1.5">Desarrollo Web</span>
+              <h3 class="card-title text-base font-bold text-gray-900 mb-1">Deli Detalles</h3>
+              <p class="text-[11px] text-gray-400 mb-3">Jun 2025 · Kandy Palomino</p>
+              <p class="card-desc text-xs mb-4">Aplicación web con Django y sql deployada en render. Gestiona productos, clientes y pedidos para repostería.</p>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span class="badge badge-purple">Python</span>
+                <span class="badge badge-purple">Django</span>
+                <span class="badge badge-purple">SQL</span>
+                <span class="badge badge-purple">Tailwind</span>
+                <span class="badge badge-purple">HTML5</span>
+                <span class="badge badge-purple">CSS3</span>
+              </div>
+              <a href="https://appdelidetalles.onrender.com" target="_blank" class="card-btn">
+                Ver más
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
             </div>
           </div>
-        </div>
 
-        <!-- Card 2 - Mis Apuntes -->
-        <div class="card card-accent-purple rounded-xl overflow-hidden flex flex-col shadow-sm bg-white border border-gray-100">
-          <div class="card-accent-bar bg-[#c59ee1]"></div>
-          <img src="/img/Captura catalogo ecommerce.jpg" alt="Ecommerce" class="w-full h-44 sm:h-48 object-cover" />
-          <div class="p-5 sm:p-6 flex flex-col flex-1">
-            <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Ecommerce</h3>
-            <p class="text-gray-500 text-sm mb-4 flex-1 leading-relaxed">Sitio web profesional para una tienda online de productos diversos.</p>
-            <div class="flex flex-wrap gap-2 mb-5">
-              <span class="badge badge-blue">Python</span>
-              <span class="badge badge-blue">Django</span>
-              <span class="badge badge-blue">sql</span>
-              <span class="badge badge-blue">tailwind</span>
-              <span class="badge badge-blue">HTML5</span>
-              <span class="badge badge-blue">CSS3</span>
+          <!-- Card 2 — Ecommerce -->
+          <div class="glass-card group">
+            <div class="relative overflow-hidden">
+              <img src="/img/Captura catalogo ecommerce.jpg" alt="Ecommerce" class="card-img" />
             </div>
-            <div class="flex gap-4 mt-auto pt-3 border-t border-gray-50">
-              <a href="https://github.com/kandylorena/mi-portafolio.git" class="text-sm font-medium text-[#2b95c8] hover:text-[#2480ad] transition-colors">GitHub →</a>
-              <a href="https://proyecto-final-bn7k.onrender.com" class="text-sm font-medium text-[#2b95c8] hover:text-[#2480ad] transition-colors">Live Demo →</a>
+            <div class="card-body">
+              <span class="text-[10px] uppercase tracking-[0.15em] text-gray-400 font-semibold mb-1.5">Ecommerce</span>
+              <h3 class="card-title text-base font-bold text-gray-900 mb-1">Ecommerce</h3>
+              <p class="text-[11px] text-gray-400 mb-3">May 2025 · Kandy Palomino</p>
+              <p class="card-desc text-xs mb-4">Tienda online profesional desarrollada con Django, SQL y Tailwind CSS.</p>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span class="badge badge-purple">Python</span>
+                <span class="badge badge-purple">Django</span>
+                <span class="badge badge-purple">SQL</span>
+                <span class="badge badge-purple">Tailwind</span>
+                <span class="badge badge-purple">HTML5</span>
+                <span class="badge badge-purple">CSS3</span>
+              </div>
+              <a href="https://proyecto-final-bn7k.onrender.com" target="_blank" class="card-btn">
+                Ver más
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
             </div>
           </div>
-        </div>
 
-        <!-- Card 3 - Web Repostería -->
-        <div class="card card-accent-pink rounded-xl overflow-hidden flex flex-col shadow-sm bg-white border border-gray-100">
-          <div class="card-accent-bar bg-[#e2a8c3]"></div>
-          <img src="/img/fondo-portafolio.jpg" alt="RECUERDAME" class="w-full h-44 sm:h-48 object-cover" />
-          <div class="p-5 sm:p-6 flex flex-col flex-1">
-            <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">RECUERDAME</h3>
-            <p class="text-gray-500 text-sm mb-4 flex-1 leading-relaxed">APP de recordatorios universitarios</p>
-            <div class="flex flex-wrap gap-2 mb-5">
-              <span class="badge badge-pink">HTML5</span>
-              <span class="badge badge-pink">CSS3</span>
-              <span class="badge badge-pink">JavaScript</span>
-              <span class="badge badge-pink">En desarrollo</span>
+          <!-- Card 3 — RECUERDAME -->
+          <div class="glass-card group">
+            <div class="relative overflow-hidden">
+              <img src="/img/fondo-portafolio.jpg" alt="RECUERDAME" class="card-img" />
             </div>
-            <div class="flex gap-4 mt-auto pt-3 border-t border-gray-50">
-              <span class="text-xs text-gray-400 italic">Próximamente</span>
+            <div class="card-body">
+              <span class="text-[10px] uppercase tracking-[0.15em] text-gray-400 font-semibold mb-1.5">App Mobile</span>
+              <h3 class="card-title text-base font-bold text-gray-900 mb-1">RECUERDAME</h3>
+              <p class="text-[11px] text-gray-400 mb-3">Abr 2025 · Kandy Palomino</p>
+              <p class="card-desc text-xs mb-4">App de recordatorios universitarios desarrollada con tecnologías frontend modernas.</p>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span class="badge badge-pink">HTML5</span>
+                <span class="badge badge-pink">CSS3</span>
+                <span class="badge badge-pink">JavaScript</span>
+                <span class="badge badge-pink">En desarrollo</span>
+              </div>
+              <span class="card-btn opacity-60 cursor-default">
+                Próximamente
+              </span>
             </div>
           </div>
+
+          <!-- Card 4 — API REST -->
+          <div class="glass-card group">
+            <div class="relative overflow-hidden h-45">
+              <div class="card-img bg-gradient-to-br from-violet-400 to-purple-600 flex items-center justify-center text-white/30 text-5xl font-bold">API</div>
+            </div>
+            <div class="card-body">
+              <span class="text-[10px] uppercase tracking-[0.15em] text-gray-400 font-semibold mb-1.5">Backend</span>
+              <h3 class="card-title text-base font-bold text-gray-900 mb-1">API REST Django</h3>
+              <p class="text-[11px] text-gray-400 mb-3">Mar 2025 · Kandy Palomino</p>
+              <p class="card-desc text-xs mb-4">API RESTful construida con Django REST Framework con autenticación JWT y documentación Swagger.</p>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span class="badge badge-lavender">Python</span>
+                <span class="badge badge-lavender">DRF</span>
+                <span class="badge badge-lavender">JWT</span>
+                <span class="badge badge-lavender">PostgreSQL</span>
+              </div>
+              <a href="#" class="card-btn">
+                Ver más
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 5 — Dashboard -->
+          <div class="glass-card group">
+            <div class="relative overflow-hidden h-45">
+              <div class="card-img bg-gradient-to-br from-fuchsia-300 to-violet-500 flex items-center justify-center text-white/30 text-5xl font-bold">DS</div>
+            </div>
+            <div class="card-body">
+              <span class="text-[10px] uppercase tracking-[0.15em] text-gray-400 font-semibold mb-1.5">Frontend</span>
+              <h3 class="card-title text-base font-bold text-gray-900 mb-1">Dashboard Analytics</h3>
+              <p class="text-[11px] text-gray-400 mb-3">Feb 2025 · Kandy Palomino</p>
+              <p class="card-desc text-xs mb-4">Panel de analytics con gráficos interactivos usando Chart.js y Django backend.</p>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span class="badge badge-lavender">JavaScript</span>
+                <span class="badge badge-lavender">Chart.js</span>
+                <span class="badge badge-lavender">Django</span>
+                <span class="badge badge-lavender">Tailwind</span>
+              </div>
+              <a href="#" class="card-btn">
+                Ver más
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 6 — Gestor de Tareas -->
+          <div class="glass-card group">
+            <div class="relative overflow-hidden h-45">
+              <div class="card-img bg-gradient-to-br from-purple-300 to-indigo-600 flex items-center justify-center text-white/30 text-5xl font-bold">GT</div>
+            </div>
+            <div class="card-body">
+              <span class="text-[10px] uppercase tracking-[0.15em] text-gray-400 font-semibold mb-1.5">Full Stack</span>
+              <h3 class="card-title text-base font-bold text-gray-900 mb-1">Task Manager Pro</h3>
+              <p class="text-[11px] text-gray-400 mb-3">Ene 2025 · Kandy Palomino</p>
+              <p class="card-desc text-xs mb-4">Gestor de tareas con autenticación, CRUD completo y búsqueda en tiempo real.</p>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span class="badge badge-purple">Django</span>
+                <span class="badge badge-purple">HTMX</span>
+                <span class="badge badge-purple">SQLite</span>
+                <span class="badge badge-purple">Alpine.js</span>
+              </div>
+              <a href="#" class="card-btn">
+                Ver más
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 7 — Blog Engine -->
+          <div class="glass-card group">
+            <div class="relative overflow-hidden h-45">
+              <div class="card-img bg-gradient-to-br from-pink-300 to-purple-600 flex items-center justify-center text-white/30 text-5xl font-bold">BL</div>
+            </div>
+            <div class="card-body">
+              <span class="text-[10px] uppercase tracking-[0.15em] text-gray-400 font-semibold mb-1.5">CMS</span>
+              <h3 class="card-title text-base font-bold text-gray-900 mb-1">Blog Engine</h3>
+              <p class="text-[11px] text-gray-400 mb-3">Dic 2024 · Kandy Palomino</p>
+              <p class="card-desc text-xs mb-4">Motor de blog con editor rich-text, categorías, comentarios y panel admin.</p>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span class="badge badge-pink">Python</span>
+                <span class="badge badge-pink">Django</span>
+                <span class="badge badge-pink">PostgreSQL</span>
+                <span class="badge badge-pink">CKEditor</span>
+              </div>
+              <a href="#" class="card-btn">
+                Ver más
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 8 — Portfolio -->
+          <div class="glass-card group">
+            <div class="relative overflow-hidden h-45">
+              <div class="card-img bg-gradient-to-br from-violet-200 to-purple-500 flex items-center justify-center text-white/30 text-5xl font-bold">PF</div>
+            </div>
+            <div class="card-body">
+              <span class="text-[10px] uppercase tracking-[0.15em] text-gray-400 font-semibold mb-1.5">Diseño</span>
+              <h3 class="card-title text-base font-bold text-gray-900 mb-1">Portfolio Personal</h3>
+              <p class="text-[11px] text-gray-400 mb-3">2025 · Kandy Palomino</p>
+              <p class="card-desc text-xs mb-4">Sitio portfolio con glassmorphism, partículas animadas y diseño responsivo.</p>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span class="badge badge-purple">HTML5</span>
+                <span class="badge badge-purple">Tailwind</span>
+                <span class="badge badge-purple">CSS3</span>
+                <span class="badge badge-purple">JavaScript</span>
+              </div>
+              <a href="#" class="card-btn">
+                Ver más
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
   </section>
 
   <!-- Section Divider -->
-  <div class="section-divider"></div>
+  <div class="section-divider relative z-10"></div>
 
-  <!-- Trayectoria Section -->
-  <section id="trayectoria" class="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-4xl mx-auto">
+  <!-- ============================================= -->
+  <!-- TRAYECTORIA -->
+  <!-- ============================================= -->
+  <section id="trayectoria" class="relative z-10 py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto glass-section-light">
       <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-900">Mi Trayectoria de Aprendizaje</h2>
       <p class="text-gray-500 text-center mb-12 sm:mb-14 max-w-lg mx-auto">Módulos completados en mi formación como desarrolladora.</p>
 
@@ -207,11 +377,13 @@
   </section>
 
   <!-- Section Divider -->
-  <div class="section-divider"></div>
+  <div class="section-divider relative z-10"></div>
 
-  <!-- Skills Section -->
-  <section id="skills" class="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-[#faf9f7]">
-    <div class="max-w-4xl mx-auto">
+  <!-- ============================================= -->
+  <!-- SKILLS -->
+  <!-- ============================================= -->
+  <section id="skills" class="relative z-10 py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto glass-section-light">
       <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-900">Habilidades</h2>
       <p class="text-gray-500 text-center mb-12 sm:mb-14 max-w-lg mx-auto">Tecnologías y herramientas con las que trabajo día a día.</p>
 
@@ -249,10 +421,12 @@
   </section>
 
   <!-- Section Divider -->
-  <div class="section-divider"></div>
+  <div class="section-divider relative z-10"></div>
 
-  <!-- Footer -->
-  <footer id="contacto-footer" class="py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+  <!-- ============================================= -->
+  <!-- FOOTER -->
+  <!-- ============================================= -->
+  <footer id="contacto-footer" class="relative z-10 py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
     <div class="max-w-4xl mx-auto text-center">
       <div class="flex justify-center gap-4 sm:gap-6 mb-6">
         <a href="#" class="social-icon" title="GitHub" aria-label="GitHub">
@@ -265,11 +439,13 @@
           <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
         </a>
       </div>
-      <p class="text-gray-400 text-xs sm:text-sm">&copy; 2026 Kandy Lorena Palomino Bolivar. Todos los derechos reservados.</p>
+      <p class="text-white/50 text-xs sm:text-sm">&copy; 2026 Kandy Lorena Palomino Bolivar. Todos los derechos reservados.</p>
     </div>
   </footer>
 
-  <!-- Contact Modal -->
+  <!-- ============================================= -->
+  <!-- CONTACT MODAL -->
+  <!-- ============================================= -->
   <div id="contactModal" class="modal-overlay hidden fixed inset-0 z-[60] bg-black/40 backdrop-blur-sm flex items-center justify-center p-4">
     <div class="modal-content bg-white rounded-2xl shadow-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto">
       <div class="flex items-center justify-between p-6 pb-0">
@@ -278,31 +454,30 @@
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
       </div>
-      
-      <!-- FORMULARIO DIRECTO CON SUS ATRIBUTOS NAME VINCULADOS A EMAILJS -->
+
       <form id="contactForm" class="p-6 space-y-5">
         <div>
           <label for="name" class="block text-sm font-medium text-gray-700 mb-1.5">Nombre</label>
           <input type="text" id="name" name="name" required placeholder="Tu nombre"
-            class="w-full px-4 py-3 rounded-xl border border-gray-200 text-gray-900 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#2b95c8]/30 focus:border-[#2b95c8] transition-all" />
+            class="w-full px-4 py-3 rounded-xl border border-gray-200 text-gray-900 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#7c3aed]/30 focus:border-[#7c3aed] transition-all" />
         </div>
         <div>
           <label for="email" class="block text-sm font-medium text-gray-700 mb-1.5">Email</label>
           <input type="email" id="email" name="email" required placeholder="tu@email.com"
-            class="w-full px-4 py-3 rounded-xl border border-gray-200 text-gray-900 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#2b95c8]/30 focus:border-[#2b95c8] transition-all" />
+            class="w-full px-4 py-3 rounded-xl border border-gray-200 text-gray-900 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#7c3aed]/30 focus:border-[#7c3aed] transition-all" />
         </div>
         <div>
           <label for="subject" class="block text-sm font-medium text-gray-700 mb-1.5">Asunto</label>
           <input type="text" id="subject" name="subject" required placeholder="¿De qué se trata?"
-            class="w-full px-4 py-3 rounded-xl border border-gray-200 text-gray-900 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#2b95c8]/30 focus:border-[#2b95c8] transition-all" />
+            class="w-full px-4 py-3 rounded-xl border border-gray-200 text-gray-900 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#7c3aed]/30 focus:border-[#7c3aed] transition-all" />
         </div>
         <div>
           <label for="message" class="block text-sm font-medium text-gray-700 mb-1.5">Mensaje</label>
           <textarea id="message" name="message" rows="4" required placeholder="Escribe tu mensaje aquí..."
-            class="w-full px-4 py-3 rounded-xl border border-gray-200 text-gray-900 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#2b95c8]/30 focus:border-[#2b95c8] transition-all resize-none"></textarea>
+            class="w-full px-4 py-3 rounded-xl border border-gray-200 text-gray-900 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#7c3aed]/30 focus:border-[#7c3aed] transition-all resize-none"></textarea>
         </div>
         <button type="submit" id="sendBtn"
-          class="w-full bg-[#2b95c8] text-white font-semibold py-3.5 rounded-xl hover:bg-[#2480ad] transition-all duration-300 flex items-center justify-center gap-2">
+          class="w-full bg-[#7c3aed] text-white font-semibold py-3.5 rounded-xl hover:bg-[#6d28d9] transition-all duration-300 flex items-center justify-center gap-2">
           <span id="sendText">Enviar Mensaje</span>
           <span id="sendSpinner" class="hidden">
             <svg class="animate-spin w-5 h-5" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/></svg>
