@@ -135,24 +135,34 @@ p, span, li, a, input, textarea {
 }
 
 /* Botón Ver más siempre al fondo */
-.glass-card .card-btn {
+.glass-card .card-links {
   margin-top: auto;
-  background: rgba(124, 58, 237, 0.12);
-  color: #6d28d9;
-  font-weight: 600;
-  padding: 0.55rem 1.25rem;
-  border-radius: 10px;
-  transition: all 0.25s ease;
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 0.5rem;
-  align-self: flex-start;
+  gap: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(229, 231, 235, 0.6);
 }
 
-.glass-card .card-btn:hover {
-  background: #7c3aed;
-  color: white;
-  box-shadow: 0 4px 16px rgba(124, 58, 237, 0.25);
+.glass-card .card-link {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #7c3aed;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.glass-card .card-link:hover {
+  color: #5b21b6;
+  transform: translateX(2px);
+}
+
+.glass-card .card-link-disabled {
+  font-size: 0.7rem;
+  color: #9ca3af;
+  font-style: italic;
 }
 
 /* ==============================================
